@@ -1,0 +1,69 @@
+﻿<nav class="navbar navbar-expand-lg navbar-light bg-success mt-5">
+    <img class="icon" src="~/dish.png" />
+    <a class="navbar-brand text-white ml-3 title">
+        Food Recipes App
+    </a>
+</nav>
+
+<div class="row body">
+    <div class="col-8 p-3">
+        <div class="col-12 card p-3">
+            <div class="row m-2">
+                <img src="~/ingredients.png" />
+                <h5 class="ml-1">Ingredient</h5>
+            </div>
+
+            <form asp-controller="Food" asp-action="Index">
+                <select class="selectpicker" data-style="btn-success" data-width="600px" multiple title="Select ingredient..." asp-items="ViewBag.Ingredients" name="ingredientList">
+                </select>
+                <button type="submit">OK</button>
+            </form>
+            
+        </div>
+
+        <div class="col-12 card p-3 mt-3">
+            <div class="row m-2">
+                <img src="~/dish.png" />
+                <h5 class="ml-1">Meal</h5>
+
+            </div>
+            <div class="meal-options">
+                <label class="m-1">
+                    <input type="radio" name="test" value="small" checked>
+                    <img class="rounded-circle" src="~/breakfast.png">
+                    <h6>Breakfast</h6>
+                </label>
+                <label class="m-1">
+                    <input type="radio" name="test" value="big">
+                    <img class="rounded-circle" src="~/rice.png">
+                    <h6>Lunch</h6>
+                </label>
+                <label class="m-1">
+                    <input type="radio" name="test" value="big">
+                    <img class="rounded-circle" src="~/vegetables.png">
+                    <h6>Dinner</h6>
+                </label>
+            </div>
+            
+
+        </div>
+
+        <div class="col-12 card p-3 mt-3">
+            <div class="row m-2">
+                <img src="~/diet.png" />
+                <h5 class="ml-1">Course</h5>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-4 p-3">
+        <div class="col-12 card p-3">
+            <div class="row m-2">
+                <img src="~/recipe.png" />
+                <h5 class="ml-1">Recipes List</h5>
+            </div>
+        </div>
+    </div>
+</div>
+
+
