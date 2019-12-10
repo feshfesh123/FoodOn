@@ -835,3 +835,5 @@ C:\Users\ngoct\Source\Repos\FoodOn\FoodOn\obj\Debug\netcoreapp3.0\FoodOn.csproj.
 C:\Users\ngoct\Source\Repos\FoodOn\FoodOn\obj\Debug\netcoreapp3.0\FoodOn.dll
 C:\Users\ngoct\Source\Repos\FoodOn\FoodOn\obj\Debug\netcoreapp3.0\FoodOn.pdb
 C:\Users\ngoct\Source\Repos\FoodOn\FoodOn\obj\Debug\netcoreapp3.0\Razor\Views\Food\_Result.cshtml.g.cs
+C:\Users\NNT\source\repos\FoodOn\FoodOn\obj\Debug\netcoreapp3.0\Razor\Views\Food\_Result.cshtml.g.cs
+C:\Users\NNT\source\repos\FoodOn\FoodOn\obj\Debug\netcoreapp3.0\Razor\Views\Food\_Info.cshtml.g.cs

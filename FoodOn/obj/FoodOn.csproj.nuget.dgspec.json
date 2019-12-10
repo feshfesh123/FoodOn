@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ngoct\\Source\\Repos\\FoodOn\\FoodOn\\FoodOn.csproj": {}
+    "C:\\Users\\NNT\\source\\repos\\FoodOn\\FoodOn\\FoodOn.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ngoct\\Source\\Repos\\FoodOn\\FoodOn\\FoodOn.csproj": {
+    "C:\\Users\\NNT\\source\\repos\\FoodOn\\FoodOn\\FoodOn.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ngoct\\Source\\Repos\\FoodOn\\FoodOn\\FoodOn.csproj",
+        "projectUniqueName": "C:\\Users\\NNT\\source\\repos\\FoodOn\\FoodOn\\FoodOn.csproj",
         "projectName": "FoodOn",
-        "projectPath": "C:\\Users\\ngoct\\Source\\Repos\\FoodOn\\FoodOn\\FoodOn.csproj",
-        "packagesPath": "C:\\Users\\ngoct\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ngoct\\Source\\Repos\\FoodOn\\FoodOn\\obj\\",
+        "projectPath": "C:\\Users\\NNT\\source\\repos\\FoodOn\\FoodOn\\FoodOn.csproj",
+        "packagesPath": "C:\\Users\\NNT\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\NNT\\source\\repos\\FoodOn\\FoodOn\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\ngoct\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\NNT\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

@@ -1,7 +1,10 @@
 ﻿@model List<string>
 
-<h3>Các thực phẩm thích hợp</h3>
-@foreach (var item in Model)
-{
-    <h5>@item</h5>
-}
+
+<ul class="list-group">
+    @foreach (var item in Model)
+    {
+        <a data-ajax="true" data-ajax-mode="replace" data-ajax-update="#info" asp-action="Recipe" asp-route-name="@item" class="list-group-item list-group-item-action">@item</a>
+    }
+</ul>
+        

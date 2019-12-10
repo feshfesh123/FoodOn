@@ -1,6 +1,6 @@
 ﻿@model SearchViewModel
 @using FoodOn.Models
-<nav class="navbar navbar-expand-lg navbar-light bg-success mt-5">
+<nav class="navbar navbar-expand-lg navbar-light bg-success mt-2">
     <img class="icon" src="~/dish.png" />
     <a class="navbar-brand text-white ml-3 title">
         Food Recipes App
@@ -8,15 +8,24 @@
 </nav>
 <form asp-action="Index" data-ajax="true" data-ajax-method="POST" data-ajax-mode="replace" data-ajax-update="#result">
     <div class="row body">
-        <div class="col-8 p-3">
+        <div class="col-6 p-3">
             <div class="row card p-3 mr-3">
                 <div class="row m-2">
                     <img src="~/ingredients.png" />
                     <h5 class="ml-1">Ingredient</h5>
                 </div>
 
-                <select class="selectpicker" data-style="btn-success" data-width="auto" multiple title="Select ingredient..." asp-items="ViewBag.Ingredients" asp-for="@Model.Ingredients">
-                </select>
+                <div class="row">
+                    <div class="col-7">
+                        <select class="selectpicker" data-style="btn-success" data-width="auto" multiple title="Select ingredient contain..." asp-items="ViewBag.Ingredients" asp-for="@Model.Ingredients">
+                        </select>
+                    </div>
+
+                    <div class="col-5">
+                        <button class="btn btn-success" type="submit">Search Results</button>
+                    </div>
+
+                </div>
 
             </div>
 
@@ -27,7 +36,7 @@
                         <h5 class="ml-1">Meal</h5>
 
                     </div>
-                    <div class="meal-options row p-2 ml-2">
+                    <div class="meal-options row p-2">
                         <label class="col-6">
                             <input type="radio" asp-for="@Model.MealType" value="0" checked>
                             <img class="rounded-circle" src="~/yogurt.png">
@@ -39,7 +48,7 @@
                             <h6>Breakfast</h6>
                         </label>
                     </div>
-                    <div class="meal-options row p-2 ml-2">
+                    <div class="meal-options row p-2">
                         <label class="col-6">
                             <input type="radio" asp-for="@Model.MealType" value="2">
                             <img class="rounded-circle" src="~/rice.png">
@@ -54,35 +63,35 @@
 
                 </div>
 
-                <div class="col-6 card p-3 ml-3">
+                <div class="col-5 card p-3 ml-5 ">
                     <div class="row m-2">
                         <img src="~/diet.png" />
                         <h5 class="ml-1">Course</h5>
                     </div>
-                    <div class="meal-options row p-2 ml-2">
-                        <label class="col-4">
+                    <div class="meal-options row p-2">
+                        <label class="col-6">
                             <input type="radio" asp-for="@Model.CourseType" value="0" checked>
                             <img class="rounded-circle" src="~/hummus.png">
                             <h6>All Course</h6>
                         </label>
-                        <label class="col-4">
+                        <label class="col-6">
                             <input type="radio" asp-for="@Model.CourseType" value="1">
                             <img class="rounded-circle" src="~/meatballs.png">
                             <h6>Dessert</h6>
                         </label>
-                        <label class="col-4">
+                        @*<label class="col-4">
                             <input type="radio" asp-for="@Model.CourseType" value="4">
                             <img class="rounded-circle" src="~/no-sugar.png">
                             <h6>Low Sugar</h6>
-                        </label>
+                        </label>*@
                     </div>
-                    <div class="meal-options row p-2 ml-2">
-                        <label class="col-4">
+                    <div class="meal-options row p-2">
+                        <label class="col-6">
                             <input type="radio" asp-for="@Model.CourseType" value="2">
                             <img class="rounded-circle" src="~/spinach.png" />
                             <h6 class="ml-1">Salad</h6>
                         </label>
-                        <label class="col-4">
+                        <label class="col-6">
                             <input type="radio" asp-for="@Model.CourseType" value="3">
                             <img class="rounded-circle" src="~/soup.png">
                             <h6 class="ml-1">Soup</h6>
@@ -93,7 +102,7 @@
 
         </div>
 
-        <div class="col-4 p-3">
+        <div class="col-3 p-3">
             <div class="col-12 card p-3">
                 <div class="row m-2">
                     <img src="~/recipe.png" />
@@ -102,11 +111,24 @@
                 <div id="result">
                     @{ await Html.RenderPartialAsync("_Result", new List<string>()); }
                 </div>
-                
+
+            </div>
+        </div>
+
+        <div class="col-3 p-3">
+            <div class="col-12 card p-3">
+                <div class="row m-2 body">
+                    <img src="~/diet.png" />
+                    <h5 class="ml-1">Recipe Details</h5>
+                </div>
+                <div id="info">
+                    @{ await Html.RenderPartialAsync("_Info", new RecipeViewModel()); }
+                </div>
             </div>
         </div>
     </div>
-    <button type="submit">OK</button>
 </form>
+
+
 
 
